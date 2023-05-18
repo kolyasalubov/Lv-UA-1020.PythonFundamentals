@@ -4,7 +4,7 @@ Zen of Python!
 2.
 3.
 4.
-5.
+56.Namespaces are one honking great idea -- let's do more of those!
 6.
 7.
 8.
