@@ -5,11 +5,7 @@ Zen of Python!
 2.
 3.Simple is better than complex.
 4. Complex is better than complicated.
-<<<<<<< HEAD
-5.
-=======
 5. Flat is better than nested.
->>>>>>> main
 6.
 7.
 8. Special cases aren't special enough to break the rules.
