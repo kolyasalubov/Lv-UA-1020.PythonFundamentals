@@ -32,7 +32,7 @@ Zen of Python!
 25.
 26.
 27.
-28.
+28.Although practicality beats purity.
 29.
 30.
 31.In the face of ambiguity, refuse the temptation to guess.
