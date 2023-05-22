@@ -38,4 +38,4 @@ Zen of Python!
 35.
 36.
 37.
-38.Namespaces are one honking great idea -- let's do more of those!Beautiful is better than ugly.
+38.Namespaces are one honking great idea -- let's do more of those!
