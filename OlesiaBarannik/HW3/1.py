@@ -13,8 +13,7 @@ counter = 0
 
 for i in zen_of_python_list:
     if i in words_dict:
-        if i in words_dict:
-            words_dict[i] += 1
-        counter += 1
+        words_dict[i] += 1
+    counter += 1
 print(words_dict)
 
