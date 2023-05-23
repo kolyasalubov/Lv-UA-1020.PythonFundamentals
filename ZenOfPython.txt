@@ -20,15 +20,15 @@ Zen of Python!
 17.
 18.If the implementation is easy to explain, it may be a good idea.
 19.Namespaces are one honking great idea -- let's do more of those!
-20.
+20. Beautiful is better than ugly.
 21.
-22.
-23.
+22.Simple is better than complex.
+23. Complex is better than complicated.
 24.
 25.
 26.
 27.
-28.
+28.Although practicality beats purity.
 29.
 30.
 31.In the face of ambiguity, refuse the temptation to guess.
@@ -38,4 +38,4 @@ Zen of Python!
 35.
 36.
 37.
-38.Namespaces are one honking great idea -- let's do more of those!Beautiful is better than ugly.
+38.Namespaces are one honking great idea -- let's do more of those!
