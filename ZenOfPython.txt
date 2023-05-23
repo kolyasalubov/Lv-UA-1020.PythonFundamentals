@@ -29,7 +29,7 @@ Zen of Python!
 26.
 27.
 28.Although practicality beats purity.
-29.
+29.Errors should never pass silently.
 30.
 31.In the face of ambiguity, refuse the temptation to guess.
 32.
