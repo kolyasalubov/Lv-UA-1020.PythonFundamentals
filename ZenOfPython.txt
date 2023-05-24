@@ -27,7 +27,7 @@ Zen of Python!
 24.
 25.
 26.
-27.
+27. Special cases aren't special enough to break the rules.
 28.Although practicality beats purity.
 29.Errors should never pass silently.
 30.
