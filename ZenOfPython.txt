@@ -18,7 +18,6 @@ Zen of Python!
 15. Now is better than never.
 16. Although never is often better than *right* now.
 17.
-<<<<<<< HEAD
 18.If the implementation is easy to explain, it may be a good idea.
 19.Namespaces are one honking great idea -- let's do more of those!
 20. Beautiful is better than ugly.
@@ -35,17 +34,9 @@ Zen of Python!
 31.In the face of ambiguity, refuse the temptation to guess.
 32.There should be one-- and preferably only one --obvious way to do it.
 33.Although that way may not be obvious at first unless you're Dutch.
-34.
+34. Now is better than never.
 35.
 36.
 37.
 38.Namespaces are one honking great idea -- let's do more of those!
-=======
-18. If the implementation is easy to explain, it may be a good idea.
-19. Namespaces are one honking great idea -- let's do more of those!
 
-
-34. Now is better than never.
-
-
->>>>>>> 190865e626f6dc7199b517729e29865970fd47a7
