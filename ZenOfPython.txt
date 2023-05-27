@@ -35,7 +35,7 @@ Zen of Python!
 32.There should be one-- and preferably only one --obvious way to do it.
 33.Although that way may not be obvious at first unless you're Dutch.
 34. Now is better than never.
-35.
+35. Although never is often better than *right* now.
 36.
 37.
 38.Namespaces are one honking great idea -- let's do more of those!
