@@ -1,7 +1,7 @@
 input_number = input("Write your number: ")
 
 a = list(input_number)
-product = int(a[0])+int(a[1])+int(a[2])+int(a[3])
+product = int(a[0])*int(a[1])*int(a[2])*int(a[3])
 b = a[::-1]
 reverse_number = int(''.join(map(str, b))) 
 c = sorted(a)
