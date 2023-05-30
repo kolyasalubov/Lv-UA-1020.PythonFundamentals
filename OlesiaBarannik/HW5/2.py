@@ -3,11 +3,15 @@
 # (Sequence of Fibonacci numbers 0, 1, 1, 2, 3, 5, 8, 13, etc.)
 
 user_number = int(input("Please enter a number to get its Fibonacci list\n"))
-list_Fibonacci = [0,1]
 
 def logic_of_Fibonacci (user_number):
-    a = 0
-    b = 1
+    list_Fibonacci = [0, 1]
+    if user_number == 0:
+        return ([0])
+    elif user_number < 2:
+        list_Fibonacci.append(1)
+        return (list_Fibonacci)
+    a, b = 0, 1
     for i in range(user_number):
         result = a + b
         a = b
@@ -15,13 +19,9 @@ def logic_of_Fibonacci (user_number):
         while result <= user_number:
             list_Fibonacci.append(result)
             break
+    return list_Fibonacci
 
-if user_number == 0:
-    print([list_Fibonacci[0]])
-elif user_number < 2:
-    list_Fibonacci.append(1)
-    print(list_Fibonacci)
-else:
-    logic_of_Fibonacci(user_number)
-    print(list_Fibonacci)
+
+print(logic_of_Fibonacci(user_number))
+
 
