@@ -11,11 +11,11 @@ def logic_of_Fibonacci (user_number):
     elif user_number < 2:
         list_Fibonacci.append(1)
         return (list_Fibonacci)
-    a, b = 0, 1
+    previous_number, second_number = 0, 1
     for i in range(user_number):
-        result = a + b
-        a = b
-        b = result
+        result = previous_number + second_number
+        previous_number = second_number
+        second_number = result
         while result <= user_number:
             list_Fibonacci.append(result)
             break
