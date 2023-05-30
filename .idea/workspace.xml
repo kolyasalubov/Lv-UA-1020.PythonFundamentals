@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="440bd643-b80c-4906-a0e3-1616e50774d2" name="Changes" comment="Task1 done">
-      <change afterPath="$PROJECT_DIR$/YuliiaShaposhnikova/HW4/Task1.py" afterDir="false" />
+    <list default="true" id="440bd643-b80c-4906-a0e3-1616e50774d2" name="Changes" comment="Task1 in HW4 done">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -140,7 +139,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685128605755</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Task1 in HW4 done">
+      <created>1685135353096</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685135353096</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +164,7 @@
     <MESSAGE value="Task2 done" />
     <MESSAGE value="Task3 done" />
     <MESSAGE value="Task1 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task1 done" />
+    <MESSAGE value="Task1 in HW4 done" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task1 in HW4 done" />
   </component>
 </project>
