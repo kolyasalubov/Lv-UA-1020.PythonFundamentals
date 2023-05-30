@@ -5,7 +5,9 @@
 user_number = int(input("Please enter a number to get its Fibonacci list\n"))
 list_Fibonacci = [0,1]
 
-def logic_of_Fibonacci (a, b):
+def logic_of_Fibonacci (user_number):
+    a = 0
+    b = 1
     for i in range(user_number):
         result = a + b
         a = b
@@ -20,6 +22,6 @@ elif user_number < 2:
     list_Fibonacci.append(1)
     print(list_Fibonacci)
 else:
-    logic_of_Fibonacci(0, 1)
+    logic_of_Fibonacci(user_number)
     print(list_Fibonacci)
 
