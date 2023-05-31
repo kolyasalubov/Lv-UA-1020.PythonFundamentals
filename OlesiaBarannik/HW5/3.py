@@ -10,3 +10,11 @@ def factorial_number(user_number):
             result *= i
     return result
 print(factorial_number(3))
+
+# def factorial_number(user_number):
+#     result = 1
+#     for i in range(1, user_number + 1):
+#         result *= i
+#     return result
+#
+# print(factorial_number(3))

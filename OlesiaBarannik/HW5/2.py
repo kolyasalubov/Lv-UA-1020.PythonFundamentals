@@ -10,7 +10,7 @@ def logic_of_Fibonacci (user_number):
         return ([0])
     elif user_number < 2:
         list_Fibonacci.append(1)
-        return (list_Fibonacci)
+        return list_Fibonacci
     previous_number, second_number = 0, 1
     for i in range(user_number):
         result = previous_number + second_number
