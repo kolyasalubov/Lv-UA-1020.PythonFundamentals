@@ -13,4 +13,3 @@ while b <= number:
 print(f"Fibonacci numbers up to {number}:")
 print(*fibonacci)
 
-

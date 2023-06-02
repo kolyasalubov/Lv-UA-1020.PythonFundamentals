@@ -16,5 +16,3 @@ print(f"The factorial of the {number} is: {factorial}")
 
 
 
-
-
