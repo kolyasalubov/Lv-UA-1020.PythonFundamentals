@@ -7,3 +7,4 @@ else:
     for i in range(2,limit_number):
         fibonacci.append(fibonacci[i-1]+fibonacci[i-2])
     print(fibonacci)
+

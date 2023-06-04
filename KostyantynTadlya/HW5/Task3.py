@@ -1,4 +1,4 @@
-number = int(input('Enter the number for factorial'))
+number = int(input('Enter the number for factorial calculation'))
 
 factorial = 1
 i = 1
