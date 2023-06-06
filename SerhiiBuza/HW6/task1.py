@@ -1,4 +1,5 @@
 
+
 even_list = []
 odd_list = []
 last_numbers = []
@@ -11,12 +12,12 @@ for item in range (10):
         elif lst[item] %3 == 0:
             odd_list.append(lst[item])
         else:
-            last_numbers.append(lst[item])
-    
+            last_numbers.append(lst[item])  
 print(f"Start list {lst}")
 print(f"Even list is {even_list}")
 print(f"ODD list that /3 is {odd_list}")
 print(f"Another number in start list {last_numbers}")
+
 
 
 
