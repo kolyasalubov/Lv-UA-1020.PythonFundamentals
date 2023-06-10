@@ -3,6 +3,7 @@
 # (use DocStrings documentation strings in the function).
 
 def largest_number(*args):
-    """function that returns the largest number"""
+    """args:  type -> tuple of numbers
+    return max number"""
     return max(args)
 print(largest_number(10,20))
