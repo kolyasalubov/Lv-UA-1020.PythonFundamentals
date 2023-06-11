@@ -9,7 +9,7 @@ def rectangle (a, b):
 
 def triangle (a, b, angle):
     rad = math.radians(angle)
-    st = round( 0.5*a*b*math.sinh(rad), 2)
+    st = round( 0.5*a*b*math.sin(rad), 2)
     return f"{st} square cm"
 
 # print (triangle (12, 14, 63))
