@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="440bd643-b80c-4906-a0e3-1616e50774d2" name="Changes" comment="Task2 in HW6 done">
-      <change beforePath="$PROJECT_DIR$/YuliiaShaposhnikova/HW6/Task2.py" beforeDir="false" afterPath="$PROJECT_DIR$/YuliiaShaposhnikova/HW6/Task2.py" afterDir="false" />
+    <list default="true" id="440bd643-b80c-4906-a0e3-1616e50774d2" name="Changes" comment="Added second solution in Task2 in HW6">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -212,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685715762030</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Added second solution in Task2 in HW6">
+      <created>1685885193836</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1685885193837</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +241,7 @@
     <MESSAGE value="Task1 in HW6 done" />
     <MESSAGE value="Added clarification according to the requirements" />
     <MESSAGE value="Task2 in HW6 done" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task2 in HW6 done" />
+    <MESSAGE value="Added second solution in Task2 in HW6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added second solution in Task2 in HW6" />
   </component>
 </project>
