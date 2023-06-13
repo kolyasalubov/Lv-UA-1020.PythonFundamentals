@@ -9,7 +9,7 @@ mgr = owm.weather_manager()
 
 
 # Search for current weather in London (Great Britain) and get details
-observation = mgr.weather_at_place('London,GB')
+observation = mgr.weather_at_place('Kalush')
 w = observation.weather
 
 print(w.detailed_status)         # 'clouds'
