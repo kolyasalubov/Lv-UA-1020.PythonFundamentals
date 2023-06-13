@@ -34,16 +34,17 @@ while run:
 
     keys = pygame.key.get_pressed()
     
-    if keys[pygame.K_LEFT]:
+    if keys[pygame.K_LEFT] and COORD_X > DELTA_STEP:
         COORD_X = COORD_X-DELTA_STEP
-    if keys[pygame.K_RIGHT]:
+    if keys[pygame.K_RIGHT] and COORD_X < (WIDTH_DISPLAY - (WIDTH_RECTANGLE + DELTA_STEP)):
         COORD_X = COORD_X+DELTA_STEP
-    if keys[pygame.K_UP]:
+    if keys[pygame.K_UP] and COORD_Y > DELTA_STEP:
         COORD_Y = COORD_Y-DELTA_STEP
-    if keys[pygame.K_DOWN]:
+    if keys[pygame.K_DOWN] and COORD_Y < (HEIGHT_DISPLAY - (HEIGHT_RECTANGLE + DELTA_STEP)):
         COORD_Y = COORD_Y+DELTA_STEP
 
-
+    gameDisplay.fill((0,0,0)) 
+    
     gameDisplay.fill(BLACK_COLOR) 
 
     pygame.draw.rect(gameDisplay, RED_COLOR, [COORD_X, 
@@ -53,4 +54,3 @@ while run:
     pygame.display.update()
     clock.tick(FPS)
     
-

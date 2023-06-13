@@ -331,4 +331,7 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# User config file
+config.py
+
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,visualstudiocode,windows
