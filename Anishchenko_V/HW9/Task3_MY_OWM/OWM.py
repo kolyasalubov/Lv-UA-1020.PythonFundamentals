@@ -1,7 +1,7 @@
 from pyowm import OWM
 
 
-API_KEY = '12d77c99f4c4d0f1ad8c836aa1c3ff45'
+API_KEY = 'xxx'
 # ---------- FREE API KEY examples ---------------------
 
 owm = OWM(API_KEY)
