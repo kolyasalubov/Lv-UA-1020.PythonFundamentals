@@ -12,12 +12,12 @@
 .idea/**/dictionaries
 .idea/**/shelf
 
-# AWS User-specific
+# AWS User-specificg
 .idea/**/aws.xml
 
 # Generated files
 .idea/**/contentModel.xml
-*config.py
+config.py
 # Sensitive or high-churn files
 .idea/**/dataSources/
 .idea/**/dataSources.ids
