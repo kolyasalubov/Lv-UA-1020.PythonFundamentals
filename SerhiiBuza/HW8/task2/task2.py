@@ -1,26 +1,18 @@
 
-b=True
-while b:
-    password = input("Create a new pass")
-    if password.upper() == password:
-        password = input("Create a new pass1")
-    elif password.lower() == password:
-        password = input("Create a new pass2")
-    elif len(password) >16 or len(password) < 6:
-        password = input("Create a new pass3")
-    elif b == True :
-        chack_list = (list(map(str, range(10))) + ["$", "#", "@"])
-        for i in range (len(chack_list)):
-            for k in range(len(password)):
-                if chack_list[i] == password[k]:
-                    k += 1
-                else:
-                    password = input("Create a new pass4")                  
-            i +=1
+check = True
+check_len = (list(map(str, range(10))) )
+check_len2 = ['@','#','$']
+password = input("Enter a pass")
 
-
-
-    else:
-        print("Pass is good")
-        b= False
-    
+while check:
+    if len(password)<6 or  len(password) >16:
+        password = input("Enter a pass1")
+    elif any(i in check_len for i in password) ==False:
+        password = input("Enter a pass2")
+    elif any(j in check_len2 for j in password) ==False:
+         password = input("Enter a pass3")
+    elif (password.upper() == password) or (password.lower() == password):
+        password = input("Enter a pass4")
+    else :
+        print ("Pass is goood")
+        check = False
