@@ -1,4 +1,4 @@
-width, height, base, r = 0, 0, 0, 0
+
 
 
 def area_rectangle(width, height):
