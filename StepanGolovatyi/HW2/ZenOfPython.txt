@@ -21,7 +21,7 @@ Zen of Python!
 18.If the implementation is easy to explain, it may be a good idea.
 19.Namespaces are one honking great idea -- let's do more of those!
 20. Beautiful is better than ugly.
-21. Explicit is better than implicit.
+21.Explicit is better than implicit.
 22.Simple is better than complex.
 23. Complex is better than complicated.
 24. Flat is better than nested.
@@ -36,6 +36,6 @@ Zen of Python!
 33.Although that way may not be obvious at first unless you're Dutch.
 34. Now is better than never.
 35. Although never is often better than *right* now.
-36. If the implementation is hard to explain, it's a bad idea.
+36. If the implementation is hard to explain, it's a bad idea!
 37.If the implementation is easy to explain, it may be a good idea.
 38.Namespaces are one honking great idea -- let's do more of those!
