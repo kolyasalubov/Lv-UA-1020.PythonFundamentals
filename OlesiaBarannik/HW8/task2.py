@@ -43,11 +43,11 @@ spec_char = ["$", "#", "@"]
 ######################################################################################
 
 
-while True:
-    if not len(re.findall("[a-z]", user_password)) >= 1 or not len(re.findall("[A-Z]", user_password)) >= 1 \
-    or not len(re.findall("\d", user_password)) >= 1 or not len(re.findall("[$,#,@]", user_password)) >= 1 \
-    or not (len(user_password) > 6 and len(user_password) < 16):
-        user_password = (input("Error Please, Enter password :\n"))
-    else:
-        print(f'This is your password {user_password}')
-        break
+# while True:
+#     if not len(re.findall("[a-z]", user_password)) >= 1 or not len(re.findall("[A-Z]", user_password)) >= 1 \
+#     or not len(re.findall("\d", user_password)) >= 1 or not len(re.findall("[$,#,@]", user_password)) >= 1 \
+#     or not (len(user_password) > 6 and len(user_password) < 16):
+#         user_password = (input("Error Please, Enter password :\n"))
+#     else:
+#         print(f'This is your password {user_password}')
+#         break
