@@ -3,7 +3,7 @@ import pygame
 # NB for Liubov: changes in line 23, introduction of variable
 #                'screen size' in line 33 and moving 'WIDTH_DISPLAY' and
 #                'HEIGHT_DISPLAY' to line 34-35 is to ensure that if the
-#                gamescreen is resized by the user, the retangle still
+#                gamescreen is resized by the user, the rectangle still
 #                behaves as required by the Task terms.
 FPS = 60
 

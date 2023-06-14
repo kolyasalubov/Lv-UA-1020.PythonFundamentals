@@ -14,7 +14,7 @@ def weather(location):
     observation = mgr.weather_at_place(location)
     w = observation.weather
 
-    # 'translate' wind direction to human-friendle representation
+    # 'translate' wind direction to human-friendly representation
     directions = ('North', 'Nord-East', 'East', 'South-East',
                   'South', 'South-West', 'West', 'North-West')
     wind_deg = w.wind()['deg']
@@ -28,4 +28,4 @@ def weather(location):
     temperat = w.temperature("celsius")
 
     # return string to be printed in GUI's lower frame
-    return f'Description: {w.detailed_status}\n\nWind:\n    speed: {w.wind()["speed"]} m/s\n    direction: {wind_direction}\n\nHumidity: {w.humidity}%\n\nTemperature (Celcius):\n    current: {temperat["temp"]}\n    feels like: {temperat["feels_like"]}\n    maximum: {temperat["temp_max"]}\n    minimum: {temperat["temp_min"]}'
+    return f'Description: {w.detailed_status}\n\nWind:\n    speed: {w.wind()["speed"]} m/s\n    direction: from {wind_direction}\n\nHumidity: {w.humidity}%\n\nTemperature (Celcius):\n    current: {temperat["temp"]}\n    feels like: {temperat["feels_like"]}\n    maximum: {temperat["temp_max"]}\n    minimum: {temperat["temp_min"]}'
