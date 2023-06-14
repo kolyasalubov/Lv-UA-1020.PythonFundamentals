@@ -45,7 +45,7 @@ spec_char = ["$", "#", "@"]
 
 
 password_pattern = "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[$#@]).{6,16}$"
-while not re.match(password_pattern, user_password):
+while not re.findall(password_pattern, user_password):
     user_password = (input("Error Please, Enter password :\n"))
 else:
     print(f'This is your password {user_password}')
