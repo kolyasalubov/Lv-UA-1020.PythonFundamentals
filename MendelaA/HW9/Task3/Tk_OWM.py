@@ -34,8 +34,8 @@ lower_frame = tk.Frame(root, bg='gold', bd=10)
 lower_frame.place(relx=0.5, rely=0.25, relwidth=0.75, relheight=0.6, anchor='n')
 
 
-label = tk.Label(lower_frame, font=('Courier', 8))
-label.place(relx=0, rely=0, relwidth=1, relheight=1)
+label = tk.Label(lower_frame, font=('Courier', 11))
+label.place(relx=0, rely=0, relwidth=1, relheight=1, anchor='nw')
 
 def button_click():
     label['text'] = get_weather(entry_field.get())

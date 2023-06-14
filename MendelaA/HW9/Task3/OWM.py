@@ -2,8 +2,10 @@ from pyowm import OWM
 import config
 
 
-def get_weather(city_name):
-    
+def get_weather(city_name:str)->str:
+    """
+    Get weather from api
+    """    
     owm = OWM(config.KEY)
     mgr = owm.weather_manager()
     
@@ -19,12 +21,13 @@ def get_weather(city_name):
     # print(w.heat_index)              # None
     # print(w.clouds)                  # 75
 
-    return (f'{w.detailed_status}\n'
-            f'{w.wind()}\n'
-            f'{w.humidity}\n'
-            f'{w.temperature("celsius")}\n'
-            f'{w.rain}\n'
-            f'{w.heat_index}\n'
-            f'{w.clouds}'
+    return (f'Humidity is {w.humidity} %\n'
+            f'Wind speed is {w.wind()["speed"]} km/hours\n'
+            f'Temperature is {w.temperature("celsius")["temp"]} C\n'
+            #f'{w.rain}\n'
+            #'Heat index is {w.heat_index}\n'
+            f'Clouds is {w.clouds} %'
             ) 
 
+if __name__ == '__main__':
+    print(get_weather('Lviv'))
