@@ -1,5 +1,6 @@
 import tkinter as tk
-import config
+#import config
+list_of_images = ['sunny.png','drissle.png','storm.png','cloudy.png','rainy.png']
 from tkinter import font
 from my_OWM import weather_data
 
@@ -33,19 +34,19 @@ def get_weather(place_f):
 def image_selection(cloud_inp) -> str:
     match cloud_inp:
         case 'clear':
-            return str(config.list_of_images[0])
+            return str(list_of_images[0])
         case 'light rain':
-            return str(config.list_of_images[1])
+            return str(list_of_images[1])
         case 'storm':
-            return str(config.list_of_images[2])
+            return str(list_of_images[2])
         case 'overcast clouds':
-            return str(config.list_of_images[3])
+            return str(list_of_images[3])
         case 'broken clouds':
-            return str(config.list_of_images[3])
+            return str(list_of_images[3])
         case 'rain':
-            return str(config.list_of_images[4])
+            return str(list_of_images[4])
         case _:
-            return str(config.list_of_images[0])
+            return str(list_of_images[0])
     
 
 
