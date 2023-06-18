@@ -8,7 +8,7 @@ root.geometry('800x600')
 
 # задаємо назву вікна
 root.title("Joe's balls")
- 
+
 canv = Canvas(root,bg='white')
 canv.pack(fill=BOTH,expand=1)
 
@@ -45,16 +45,18 @@ def click(event):
 
 #Таймер на 1хв    
 def my_timer():
-    msg = Message(root, text=f'Time left, mis_clik {mis_click}, catched ball {points}').pack()
-    #canv.config(state='disabled')
+    global timing
+    msg = Message(root, text=f'Time left, mis_clik {mis_click}, catched ball {points}')
+    msg.pack(fill=BOTH)
+
     canv.unbind("<Button-1>")
-     
+    timing = 0 
 
 mis_click = 0
 timing = 1000
 points = 0
 #One minute contain 60 000 ms
-total_time = 60000
+total_time = 6000
 
 
 new_ball()
