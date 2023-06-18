@@ -29,11 +29,11 @@ def gues_number(event):
     elif value > rand_int:
         label_1["text"] = "Try lower number"
         counter +=1
-        label_2["text"] = f"Attempt: {counter+1}"
+        label_2["text"] = f"Attempt: {counter}"
     else:
         label_1["text"] = "Try higer number"
         counter +=1
-        label_2["text"] = f"Attempt: {counter+1}"
+        label_2["text"] = f"Attempt: {counter}"
 
     user_input.delete(0, 20)
 
