@@ -1,6 +1,10 @@
 from pyowm import OWM
 import config
 
+# class Weather()
+#     def __init__(self, place) -> None:
+#         self.place = place
+#     def wind(self, )
 
 API_KEY = config.KEY
 # ---------- FREE API KEY examples ---------------------
@@ -13,6 +17,7 @@ mgr = owm.weather_manager()
 def weather_data(place_forecast: str) ->object:
     observation = mgr.weather_at_place(place_forecast) #('London,GB')
     return observation.weather
+
 
 # print(w.detailed_status)         # 'clouds'
 # print(w.wind())                  # {'speed': 4.6, 'deg': 330}
