@@ -6,3 +6,20 @@ You have to do God's job. The creation method must return an array of length 2 c
 The second should be an instance of the class Woman. Both objects have to be subclasses of Human.
 Your job is to implement the Human, Man and Woman classes.
 """
+
+def God():
+    pass
+
+
+class Human():
+    pass
+
+class Man(Human):
+    pass
+
+class Woman(Human):
+    pass
+
+
+adam = Man()
+eve = Woman()
