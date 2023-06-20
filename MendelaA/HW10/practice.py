@@ -1,10 +1,39 @@
-class Point:
-    def __init__(self, x = 0, y = 0):
-        self.x = x
-        self.y = y
+
+# class SSBird():
+#     def __init__(self):
+#         print("SSBird is ready")
+
+
+class Bird:
     
-    def __repr__(self):
-        return f"Information From repr_({self.x},{self.y})"
-    
-    def __str__(self):
-        return f"That is Point ({self.x},{self.y})"
+    def __init__(self):
+        print("Bird is ready")
+ 
+    def whoisThis(self):
+        print("Bird")
+ 
+    def swim(self):
+        print("Swim faster")
+ 
+# child class
+class Penguin(Bird):
+ 
+    def __init__(self):
+        # call super() function
+        # Bird.__init__(self)
+        super().__init__()
+        print("Penguin is ready")
+ 
+    def whoisThis(self):
+        # Bird.whoisThis(self)
+        super().whoisThis()
+        print("Penguin")
+        
+ 
+    def run(self):
+        print("Run faster")
+ 
+peggy = Penguin()
+peggy.whoisThis()
+# peggy.swim()
+# peggy.run()
