@@ -27,11 +27,10 @@ class Triangle(Polygon):
         super().__init__(3)
 
     def check_triangle(self):
-        a, b, c = self.sides
-        if a + b >= c and b + c >= a and c + a >= b:
+        j = sorted(self.sides)
+        if (j[0] + j[1]) >= j[2]:
             return True
-        else:
-            return False
+        return False
     def findArea2(self):
         if self.check_triangle() is True:
             a, b, c = self.sides
