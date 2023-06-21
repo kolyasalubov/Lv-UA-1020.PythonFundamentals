@@ -8,8 +8,9 @@ Your job is to implement the Human, Man and Woman classes.
 """
 
 def God():
-    pass
-
+    adam = Man()
+    eve = Woman()
+    return adam, eve
 
 class Human():
     pass
@@ -21,5 +22,5 @@ class Woman(Human):
     pass
 
 
-adam = Man()
-eve = Woman()
+
+print(God())
