@@ -8,3 +8,15 @@
     three functions for finding areas, into the main program. The basic logic of the
     program is executed in the main module).
 """
+from math import pi
+from math import pow
+
+def rectangle_area(a: float, b: float) -> float:
+    return a * b
+
+def triangle_area(base: float, height: float) -> float:
+    return 0.5 * base * height
+
+def circle_area(radius: float) -> float:
+    return pi * pow(radius, 2)
+
