@@ -80,3 +80,25 @@
 # ball.get_surface_area()
 # ball.get_density()
 ##################################################################################################
+#Note: Proposed function should allow only names with alphanumeric chars (upper & lower letters plus ciphers),
+# but starting only with upper case letter. In other case it should raise an exception.
+#Disclaimer: there are obviously betters way to check class name than in example cases, but let's stick with that,
+# that Timmy yet has to learn them.
+class MyClass:
+    pass
+
+class MyClass:
+    pass
+def class_name_changer(MyClass, new_name):
+    if not (new_name[0] >= 'A' and new_name[0] <= 'Z') or not new_name.isalnum():
+        raise ValueError(
+            "Invalid class name. Class names should start with an uppercase letter and contain only alphanumeric characters.")
+    MyClass.__name__ = new_name
+    return MyClass
+
+myObject = MyClass();
+class_name_changer(MyClass, "vsefulClass")
+print(MyClass.__name__)
+class_name_changer(MyClass, "SecondUsefulClass")
+print(MyClass.__name__)
+
