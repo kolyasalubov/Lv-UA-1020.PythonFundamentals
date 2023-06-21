@@ -11,9 +11,9 @@ class Employee:
         print(f"The total number of employees: {cls.counter}")
 
     @classmethod
-    def displays(self):
+    def displays(cls):
         for i in Employee.employee_list:
-            print(i['name'], "=>", i['salary'])
+            print(i['name'], i['salary'])
 
     @classmethod
     def info_class(cls):
