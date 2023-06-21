@@ -9,8 +9,14 @@ complete the get Info property and getInfo method/Info getter which should retur
 
 
 class Person():
-    def __init__(self, name, age):
+    def __init__(self, name='none', age=0):
         self.name = name
         self.age = age
-        self.info="#{name}s age is #{age}"
+        self.info=f"{self.name}s age is {self.age}"
 
+    def getInfo(self):
+        return f'{self.name}s age is {self.age}'
+   
+
+joe = Person('johns', 34)
+print(joe.getInfo())
