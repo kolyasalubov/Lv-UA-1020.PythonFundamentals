@@ -23,3 +23,4 @@ if __name__ == '__main__':
     c.inputSides()
     print(f"The area of rectangle: {c.area()}")
 
+
