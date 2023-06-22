@@ -29,7 +29,7 @@ if __name__ == '__main__':
     print(Emploee.__name__)
     print(Emploee.__module__)
     print(Emploee.__doc__)
-    print(Emploee.__weakref__)
+
 
     
 
