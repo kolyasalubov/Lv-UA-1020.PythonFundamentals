@@ -15,6 +15,10 @@ class Emploee:
     def emploee_info(self):
         print(f'The emploee {self.name} receives the salary of  {self.salary} $ ')
 
+    def __del__(self):
+        Emploee.TOTAL_EMPLOEE-=1
+
+
 if __name__ == '__main__':
     empl1 = Emploee('Gala', 1000)
     empl2 = Emploee('Anya', 1050)
