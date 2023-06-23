@@ -1,6 +1,0 @@
-user_name = input ("WHAT IS YOUR NAME?\n")
-print ( "Hello", user_name.upper())
-user_age = input ("HOW OLD ARE YOU?\n")
-print ("YOUR AGE IS", user_age.upper())
-user_adress = input ("WHERE DO YOU LIVE?\n")
-print ("YOU LIVE IN", user_adress.upper())

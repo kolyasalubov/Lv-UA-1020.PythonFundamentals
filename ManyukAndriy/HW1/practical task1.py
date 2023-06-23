@@ -1,6 +1,0 @@
-user_name = input("What is your name?\n")
-print(f"Hello {user_name}!")
-user_age = input("How old are you?\n")
-print(f"Your age is {user_age}")
-living_place = input("Where do you live?\n")
-print(f"You live in {living_place}")
