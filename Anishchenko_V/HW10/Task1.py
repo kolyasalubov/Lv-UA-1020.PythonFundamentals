@@ -8,6 +8,10 @@ class Polygon:
 
 
 class Rect(Polygon):
+    """
+    This is a child of class Polygon
+    """
+
     def __init__(self):
         super(Rect, self).__init__()
 

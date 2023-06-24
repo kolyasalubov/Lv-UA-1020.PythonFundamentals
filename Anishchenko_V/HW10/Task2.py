@@ -9,10 +9,10 @@ class Human:
     def greet(self):
         print(f'Hello {self.name}')
 
-    def specie(self):
-        self.spec = 'Homosapiens'
-        return self.spec
-
     @classmethod
-    def classmethod(cls):
-        return f'This is class method of {cls}'
+    def say_species(cls):
+        return f'Class {cls.__name__} is a species of "Homosapiens"'
+
+    @staticmethod
+    def arbitrary():
+        return 'This is an arbitrary message'
