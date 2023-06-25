@@ -13,63 +13,59 @@
 # finally:
 #     print(age)
 
-# #Task 2
+#Task 2
+# import re
+
 # def check(login):
 #     try:
-#         login = login.split('-')
-#         print(login)
-#         if not login[1].isdigit():
-#             raise Exception
-#     except IndexError as e:
-#         return (f'fincorect login {login}')
-#     except ValueError as e:
-#         return e
+#         login = re.split('-|id|id', login)
+#         if len(login) < 2:
+#             raise ValueError(f"incorrect login '{''.join(login)}'")
+#     except ValueError as err:
+#         raise ValueError(str(err))
 #     else:
 #         return True
 
 
-# # correct_login = "employee-124"
-# # correct_login1 = "employee124"
-# # print(check(correct_login))
-# # print(check(correct_login1))
-
-
-# incorrect_login = "incorrect_login"
-# try:
-#     print(check(incorrect_login))
-# except ValueError:
-#     print("Catched")
-
-# #Task3
-# class MyError(Exception):
-#     def __init__ (self, data):
-#         self.data = data
+#Task3
+class MyError(Exception):
+    def __init__ (self, data):
+        self.data = data
     
-#     def __str__(self):
-#         return repr(self.data)
+    def __str__(self):
+        return repr(self.data)
 
 
-# def check_positive(number):
-#     try:
+def check_positive(number):
+    try:
+        if isinstance(number, (float, int)) and number > 0:
+            raise MyError(f'You input positive number: {float(number)}')            
+        elif isinstance(number, (float, int)) and number < 0:
+            raise MyError(f'You input negative number: {float(number)}. Try again.')                          
+        elif isinstance(number, str):
+            try:
+                if float(number) < 0:
+                    print(float(number))
+                    raise MyError(f'You input negative number: {float(number)}. Try again.') 
+            except:
+                raise MyError(f'Error type: ValueError!')
+            else:
+                raise MyError(f'You input positive number: {float(number)}')    
 
-#         if not isinstance(number, (int, float)):
-#             raise MyError(f'Error type: ValueError!')
-#         elif number > 0:
-#             raise MyError(f'You input positive number {number}')
-#         elif number < 0:
-#             raise MyError('You input negative number' + str(number))
+    except MyError as err:
+        return err.data
 
-#     except MyError as e:
-#         return e
+print(check_positive(8.9))
+print(check_positive(-12))
+print(check_positive(0.7))
+print(check_positive(-0.6))
+print(check_positive("abs"))
+print(check_positive("45"))
+print(isinstance(check_positive("-235"), MyError))
 
-# print(check_positive(8.9), type())
-# print(check_positive(12))
-# print(check_positive(-12))
-# print(check_positive("abs"))
-# print(isinstance(check_positive("-235"), MyError))
-# print(check_positive("45"))
+print('######################')
+print(check_positive("-235"))
 
 #task4
 
-def check_odd_even():
-    
+
