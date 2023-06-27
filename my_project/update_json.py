@@ -19,6 +19,8 @@ def update_json(chat_id, key, value):
     with open(file_path, 'w') as file:
         json.dump(data, file)
 
+
+
 # update_json(697755555, "name", "pill100")
 # update_json(697755555, "day", 55)
 # update_json(697755555, "time", ["18:00"])

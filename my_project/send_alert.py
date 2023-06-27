@@ -43,7 +43,7 @@ def parse_json():
         chat_id = alert['chat_id']
         pill_name = alert['name']
         time = alert['current_time']
-        message = "Hello! You need to take the pills " + pill_name + " at " + time
+        message = f"Hello! You need to take the pills {pill_name} at {time}"
         send_alert(chat_id, message)
 
 parse_json()

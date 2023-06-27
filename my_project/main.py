@@ -53,7 +53,7 @@ def add_name(message):
 def add_day(message):
     chat_id = message.chat.id
     value = message.text
-    update_json(chat_id, "day", value)
+    update_json(chat_id, "day", int(value))
 
 def add_time(message):
     chat_id = message.chat.id
