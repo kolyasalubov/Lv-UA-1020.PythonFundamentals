@@ -117,6 +117,9 @@ def db_get():
         cursor = conn.cursor()
         cursor.execute('SELECT nick_name, max(scores) FROM results')
         result = cursor.fetchall()
+
+        result = f'{result[0][0]} has catched {result[0][1]} balls' #Make pretty str
+
         score_list.config(text = result) #Change Label
 
 
