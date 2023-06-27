@@ -135,37 +135,7 @@ total_time = 6000
 #total_time = 1000
 
 
-def my_timer():
-    global timing, tm, new_game_btn,quit_btn,x,y,r,top_label,show_score_btn,score_list,save_btn
-    # msg = Message(root, text=f'Time left, mis_clik {mis_click}, catched ball {points}')
-    # msg.pack(fill=BOTH)
 
-    canv.unbind("<Button-1>")
-    #timing = 0
-
-    # new_game_btn = Button(root, text='Start new game', command=start_new_game)
-    # new_game_btn.pack()
-
-    # write_score_btn = Button(root, text='Write Score', command='')
-    # write_score_btn.pack()
-    nik_label = Label(root, text="Enter yout NikName")
-    nik_label.pack(pady=1)
-
-    show_score_btn = Entry(root)
-    show_score_btn.pack(pady=1)
-
-    save_btn = Button(root, text='Save score', command=db_add)
-    save_btn.pack(pady=1)
-
-    top_label = Label(root, text="Top USER IS !")
-    top_label.pack(pady=1)
-
-    score_list = Label(root)
-    score_list.pack(pady=1)
-    
-    quit_btn = Button(root, text='Quit game', command=root.quit)
-    quit_btn.pack(pady=1)
-    db()
 
 # def save_score():
 #    save_btn['state'] = DISABLED
