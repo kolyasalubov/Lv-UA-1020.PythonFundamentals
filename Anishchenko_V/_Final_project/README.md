@@ -14,7 +14,7 @@
 
 Three radio buttons on top of the window allow to chose complexity level.
 
-Once you've won or lost you can chose another level or restart the same by clicking on emoji icon.
+Once you've won or lost you can chose another level or restart the game by clicking on emoji icon.
 
 You can also hit "Quick Start", in which case the program randomly opens a few cells that are definitely not mined. You will find this tool handy on 'expert' and 'medium' levels, on which chances to hit a mine on the first or second click are higher and can make you annoyed very quickly. The "Quick Start" feature is the only addition to the classic game which many of the office plankton species used to kill time with on their Windows XPs back in 00s.
 
