@@ -1,3 +1,5 @@
+# ![Image of mine](https://github.com/kolyasalubov/Lv-UA-1020.PythonFundamentals/blob/Anishchenko_V/Anishchenko_V/_Final_project/imgs/bomb_fav.png)
+
 # Replica of classic MINESWEEPER game.
 
 **Rules** are simple:
