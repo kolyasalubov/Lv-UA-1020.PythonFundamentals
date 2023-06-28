@@ -9,7 +9,7 @@ main = Flask(__name__)
 bot = telebot.TeleBot(KEY)
 
 @main.route("/", methods=["POST"])
-#функція є обробником HTTP POST-запитів, які надсилаються на кореневий шлях ("/") вашого веб-сервера Flask.
+#функція є обробником HTTP POST-запитів, які надсилаються на кореневий шлях ("/") веб-сервера Flask.
 def process():
     # Оновлення отримані з JSON даних перетворюються у відповідний об'єкт Update за допомогою telebot.types.Update.de_json().
     update = telebot.types.Update.de_json(request.get_json(force=True))#force - гарантує, що функція спробує розпізнати

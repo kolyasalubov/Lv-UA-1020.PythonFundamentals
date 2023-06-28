@@ -2,6 +2,7 @@ import telebot
 from config1 import KEY
 import json
 import datetime
+from datetime import datetime
 
 def send_alert(chat_id, message):#відправляє повідомлення з вказаним текстом на вказаний chat_id
     bot = telebot.TeleBot(KEY)
@@ -10,7 +11,7 @@ def send_alert(chat_id, message):#відправляє повідомлення 
 def parse_json():# функція яка вичитує json для подальшого педавання інф в message. повертає
     # словничок конкретного id якщо поточна година
     file_path = 'pills_library.json'
-    current_time = datetime.datetime.now().strftime('%H:%M')
+    current_time = datetime.now().strftime('%H:%M')
 
     with open(file_path, 'r') as file:
         json_data = file.read()
@@ -21,18 +22,19 @@ def parse_json():# функція яка вичитує json для подаль
     for item in data:
         item_time = item['time']
         item_day = int(item['day'])
-
+        creation_date = datetime.strptime(item['creation_date'], '%Y-%m-%d').date()
+        current_date = datetime.now().date()
+        date_difference = current_date - creation_date # різниця між датою коли був створений запис та поточною датою
 
         if current_time in item_time:
 
-            if item_day > 0:
+            if item_day >= date_difference.days:
                 alert_item = {
                     'chat_id': item['chat_id'],
                     'name': item['name'],
                     'current_time': current_time
                 }
                 alert_list.append(alert_item)
-                item['day'] = item_day - 1  # зменшує кількість днів (кількість прийомів ліків)в словнику
 
 
     with open(file_path, 'w') as file:
