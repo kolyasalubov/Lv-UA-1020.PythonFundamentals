@@ -1,19 +1,21 @@
 import json
-def get_max_index_by_chat_id(pill_list, chat_id):
+def get_max_index_by_chat_id(pill_list, chat_id): # функція знаходить найбільший індекс
+    # елемента в списку, який відповідає певному chat_id
     max_index = -1
     for index, pill in enumerate(pill_list):
         if pill['chat_id'] == chat_id:
             max_index = max(max_index, index)
     return max_index
 
-def update_json(chat_id, key, value):
-    file_path = 'pills_library.json'
+def update_json(chat_id, key, value): #записуємо дані в json
+    file_path = 'pills_library.json'#сам файл json
 
-    with open(file_path, 'r') as file:
+    with open(file_path, 'r') as file:#спершу вичитуємо файл
         data = json.load(file)
-        if key == 'name':
+        if key == 'name':#якщо приходить name додаємо новий словник в список словників
                 data.append({"chat_id": chat_id, "name": value, "day": 0, "time": []})
-        elif key == "day" or key == "time":
+        elif key == "day" or key == "time":#якщо приходить "day" чи "time" записуємл в максимальний (останній) словник
+            # дні по ключу і час аналогічно використовуючи функцію яка повертає макс індекс по конкретному id
             max_index = get_max_index_by_chat_id(data, chat_id)
             data[max_index][key] = value
     with open(file_path, 'w') as file:

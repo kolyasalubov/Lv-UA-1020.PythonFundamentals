@@ -3,11 +3,12 @@ from config1 import KEY
 import json
 import datetime
 
-def send_alert(chat_id, message):
+def send_alert(chat_id, message):#відправляє повідомлення з вказаним текстом на вказаний chat_id
     bot = telebot.TeleBot(KEY)
     bot.send_message(chat_id, message)
 
-def parse_json():
+def parse_json():# функція яка вичитує json для подальшого педавання інф в message. повертає
+    # словничок конкретного id якщо поточна година
     file_path = 'pills_library.json'
     current_time = datetime.datetime.now().strftime('%H:%M')
 
@@ -15,7 +16,7 @@ def parse_json():
         json_data = file.read()
     data = json.loads(json_data)
 
-    alert_list = []
+    alert_list = []# конкретний ліст поточної дати
 
     for item in data:
         item_time = item['time']
@@ -31,7 +32,7 @@ def parse_json():
                     'current_time': current_time
                 }
                 alert_list.append(alert_item)
-                item['day'] = item_day - 1  # Minus 1 from day
+                item['day'] = item_day - 1  # зменшує кількість днів (кількість прийомів ліків)в словнику
 
 
     with open(file_path, 'w') as file:
@@ -43,7 +44,7 @@ def parse_json():
         chat_id = alert['chat_id']
         pill_name = alert['name']
         time = alert['current_time']
-        message = f"Hello! You need to take the pills {pill_name} at {time}"
+        message = f"Hello! You need to take the pills {pill_name} at {time}"# повідомлення юзеру
         send_alert(chat_id, message)
 
 parse_json()
