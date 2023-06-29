@@ -1,9 +1,13 @@
-#Імпорт модулів
+#Імпорт модуля для бота телеграм
 import telebot
-import config
-import time
-from random import randint
 from telebot import types
+#Імпорт приватного ключа бота
+import config
+#Імпорт модуля для затримки часу повідомлень
+import time
+#Імпорт модуля для генерації рандомного числа
+from random import randint
+
 
 
 #Ключ від телеграм бота
