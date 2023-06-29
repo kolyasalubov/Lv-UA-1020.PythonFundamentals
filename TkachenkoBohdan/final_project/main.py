@@ -96,4 +96,4 @@ def callback_end_game(call):
 #Метод який запускає бота.
 bot.polling()
 
-bot_token = '6231407583:AAFEOCO8PWkws9BLo54hfcjhMI4QRMu4dyY'
+#посилання на бота https://t.me/my_final_proj_dice_bot
