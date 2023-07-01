@@ -3,6 +3,19 @@ import time
 from PIL import Image, ImageTk
 import util as ut
 
+
+class Btn:
+    """
+    Class of buttons in the gamefield
+    """
+
+    def __init__(self, label, row, col):
+        self.label = label
+        self.id = row + col
+        self.stateL = 1
+        self.stateR = 1
+
+
 # Create main window and window title
 root = tk.Tk()
 root.title("Minesweeper")
@@ -58,9 +71,7 @@ def setupField():
     which initialized objects of class Cell
     """
     global grid
-    global lb_dict
-    global state_l_dict
-    global state_r_dict
+    global btns
     global lvl
     lvl = level.get()
     grid = field_and_mines[lvl]
@@ -72,12 +83,10 @@ def setupField():
     # level of the game
     root.geometry(field_sizes[lvl])
 
-    # Update various labels / dictionaries
+    # Update various labels and list of buttons
     mines_counter.config(text=field_and_mines[lvl][2])
     stopwatch.config(text="000")
-    lb_dict = {}
-    state_l_dict = {}
-    state_r_dict = {}
+    btns = []
 
     # Remove any previously renderred frames
     if frames_list:
@@ -86,11 +95,7 @@ def setupField():
 
     # Create frames for each row on gamefield.
     # Create labels representing cells on gamefield,
-    # bind to the lbels click- event listeners,
-    # place libels into dict 'lb_dict'.
-    # Create dicts 'state_l_dict' and 'state_r_dict' -
-    # this is required to unbind event listeners when
-    # game logic requires.
+    # bind to the lbels click- event listeners.
     for r in range(grid[0]):
         row = str(r) if r >= 10 else '0'+str(r)
         frame = tk.Frame(root)
@@ -103,9 +108,8 @@ def setupField():
             label.pack(side=tk.LEFT)
             label.bind("<Button-1>", leftClick)
             label.bind("<Button-3>", rightClick)
-            lb_dict[row + col] = label
-            state_l_dict[row + col] = 1
-            state_r_dict[row + col] = 1
+            btn = Btn(label, row, col)
+            btns.append(btn)
     emo_icon.config(image=icons_emo[0])
     emo_icon.unbind("<Button-1>")
 
@@ -167,12 +171,12 @@ def leftClick(e):
     Function handles events on leftclick on the gamefield
     """
     caller = e.widget
-    callerID = list(filter(lambda x: lb_dict[x] == caller, lb_dict))[0]
+    calledBtn = list(filter(lambda x: x.label == caller, btns))[0]
 
     # If game is won or lost, the leftclick should be disabled,
     # otherwise function 'revealCells' is called
-    if state_l_dict[callerID] == 1:
-        revealCells(callerID)
+    if calledBtn.stateL == 1:
+        revealCells(calledBtn.id)
 
 
 def revealCells(cellID):
@@ -199,18 +203,17 @@ def revealCells(cellID):
     # Reveal cells on the gamefield based on data collected above,
     # disable click events for all revealed cells
     for x in labels_to_open:
-        id = x[0]
-        lb_dict[id].config(image=icons[x[1]])
-        lb_dict[id].config(relief="ridge")
-        state_l_dict[id] = 0
-        state_r_dict[id] = 0
+        btn = list(filter(lambda i: i.id == x[0], btns))[0]
+        btn.label.config(image=icons[x[1]])
+        btn.label.config(relief="ridge")
+        btn.stateL = 0
+        btn.stateR = 0
     # End game if it is won or lost
     if game_status != 0:
         # Disable click events for all cells
-        for key in state_l_dict:
-            state_l_dict[key] = 0
-        for key in state_r_dict:
-            state_r_dict[key] = 0
+        for btn in btns:
+            btn.stateL = 0
+            btn.stateR = 0
         # Enable possibility to select game level
         for r in radios:
             radios[r].config(state="normal")
@@ -232,16 +235,16 @@ def rightClick(e):
     the gamefield
     """
     caller = e.widget
-    callerID = list(filter(lambda x: lb_dict[x] == caller, lb_dict))[0]
+    calledBtn = list(filter(lambda i: i.label == caller, btns))[0]
     # If clicked label was not flagged or revealed previously
-    if state_r_dict[callerID] == 1:
-        ut.setFlag(callerID)
+    if calledBtn.stateR == 1:
+        ut.setFlag(calledBtn.id)
         # Display flag on the label
         caller.config(image=icons[10])
-        # Toggle right click event listener indictor for the label,
+        # Toggle right click event listener indicator for the label,
         # disable left click event listener
-        state_r_dict[callerID] *= -1
-        state_l_dict[callerID] = 0
+        calledBtn.stateR *= -1
+        calledBtn.stateL *= 0
         # Update quantity of remaining mines shown on the counter label
         counter_current = int(mines_counter.cget("text"))
         counter_new = max(counter_current - 1, 0)
@@ -249,17 +252,17 @@ def rightClick(e):
         mines_counter.config(text=insertion)
 
     # If clicked cell was flagged before (but is not yet revealed)
-    elif state_r_dict[callerID] == -1:
-        ut.unflag(callerID)
+    elif calledBtn.stateR == -1:
+        ut.unflag(calledBtn.id)
         # Remove flag from the label
         caller.config(image=icons[11])
-        # Toggle right click event listener indictor for the label,
+        # Toggle right click event listener indicator for the label,
         # enable left click event listener
-        state_r_dict[callerID] *= -1
-        state_l_dict[callerID] = 1
+        calledBtn.stateR *= -1
+        calledBtn.stateL *= 1
         # Update quantity of remaining mines shown on the counter label
         mines_total = field_and_mines[lvl][2]
-        flags_remain = sum(value == -1 for value in state_r_dict.values())
+        flags_remain = len(list(filter(lambda x: x.stateR == -1, btns)))
         if mines_total - flags_remain > 0:
             counter_current = int(mines_counter.cget("text"))
             counter_new = counter_current + 1

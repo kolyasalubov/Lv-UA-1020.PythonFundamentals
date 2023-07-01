@@ -170,7 +170,7 @@ def quickStart():
     and returns result to main.py for the purposes of Quick Start
     scenario.
     """
-    clean_cells = [x for x in cells if not x.mines_around]
+    clean_cells = [x for x in cells if not x.mined and not x.mines_around]
     clean_cell = random.choice(clean_cells)
     clean_ID = clean_cell.fullID
     return clean_ID
