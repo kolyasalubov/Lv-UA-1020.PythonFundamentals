@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>EnergyShopp</title>
+{% endblock %}
+
+{% block body %}
+<div class="d-flex justify-content-center py-3">
+    <ul class="nav nav-pills">
+        <li class="nav-item"><a href="{{ url_for('index', sort='A-Z') }}" class="nav-link" aria-current="page">Sort
+                A-Z</a></li>
+        <li class="nav-item"><a href="{{ url_for('index', sort='price-up') }}" class="nav-link">Sort by price ↖</a></li>
+        <li class="nav-item"><a href="{{ url_for('index', sort='price-down') }}" class="nav-link">Sort by
+                price ↘</a></li>
+        <li class="nav-item"><a href="{{ url_for('index', sort='amount-up') }}" class="nav-link">Sort by
+                amount ↖</a></li>
+        <li class="nav-item"><a href="{{ url_for('index', sort='amount-down') }}" class="nav-link">Sort by
+                amount ↘</a></li>
+
+    </ul>
+</div>
+
+
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    {% for item in data_ %}
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">{{item.title}}</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">{{item.price}} $</h1>
+                <p class="card-title pricing-card-title">Vendor code {{item.description}}</p>
+                <p class="card-title pricing-card-title">Quantity in stock {{item.amount}}</p>
+                <div>
+                    {% if item.image_data %}
+                    <img src="data:image/png;base64,{{ item.image_data|b64encode }}"
+                        style="max-width: 100%; max-height: 100px;" alt="Item Image">
+                    {% else %}
+                    <p>No Image Available</p>
+                    {% endif %}
+                </div>
+                <button type="button" class="w-100 btn btn-lg btn-outline-primary">BUY</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
