@@ -95,3 +95,5 @@ def callback_end_game(call):
     bot.send_message(call.message.chat.id, "Дякую за гру. До зустрічі! Якщо хочете розпочати гру заново, напишіть /start")
 #Метод який запускає бота.
 bot.polling()
+
+#посилання на бота https://t.me/my_final_proj_dice_bot
