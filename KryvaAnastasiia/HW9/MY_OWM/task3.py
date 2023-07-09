@@ -21,7 +21,8 @@ def weather_response():
 # print(w.rain)                 # {}
 # print(w.heat_index)            # None
     w.clouds              # 75
-    return f"City: {user_city} \nConditions : {w.detailed_status} \nTemperature is {round(w.temperature('celsius')['temp'], 2)} C \nWind speed is {w.wind()['speed']} km\hours \nHumidity of the air is {w.humidity}\nCloud coverage is {w.clouds}%"
+    return f"City: {user_city} \nConditions : {w.detailed_status} \nTemperature is {round(w.temperature('celsius')['temp'], 2)} C\
+          \nWind speed is {w.wind()['speed']} km\hours \nHumidity of the air is {w.humidity}\nCloud coverage is {w.clouds}%"
 
 def get_weather():
     label['text'] = weather_response()
