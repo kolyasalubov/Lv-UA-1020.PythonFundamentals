@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Document</title>
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h2>Add products</h2>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <div class="alert alert-danger">
+            <ul class="mb-0">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+{% endwith %}
+    <form method="POST" action="/create" enctype="multipart/form-data">
+        <input class="form-control" name="title" type="text" id="title" placeholder="Name"> <br>
+        <input class="form-control" name="price" type="number" id="price" placeholder="Price"> <br>
+        <input class="form-control" name="description" type="text" id="description" placeholder="Art."> <br>
+        <input class="form-control" name="amount" type="number" id="amount" placeholder="amount"> <br>
+        <input class="form-control" name="image" type="file" id="image" accept="image/*"> <br>
+        <button class="btn btn-success" type="submit" >ADD PRODUCT </button>
+    
+    </form>
+    
+</div>
+{% endblock %}
